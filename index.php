@@ -70,7 +70,7 @@ CloseCon($con);
                 <span class="slider round"></span>
             </label>
 
-            <h3>Turn Off and On the LED! asdfasdfasdf </h3>
+            <h3>Turn Off and On the LED! sgdrgfsdgdf  </h3>
         </section>
         <section class="dht-data"> 
             <div class="table-wrapper">
