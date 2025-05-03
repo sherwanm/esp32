@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+section {
+    padding: 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #ffd517;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #ffd517;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.led-container {
+    width: 10rem;
+    height: auto;
+}
+
+.led-img {
+    width: 100%;
+    height: auto;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.second-section .switch {
+    margin-block: 1rem;
+}
+.table-wrapper{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.table-key{
+    width: 50%;
+    padding: 8px;
+}
+.table-key:last-child{
+    border-bottom: 0;
+}
+.celcius-degree, .humidity-percent{
+    background: #cccccc;
+    padding: 8px;
+    width: 50%;
+}
+.table-key-value-wrapper{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #b3b1b1;
+}
+.table-key-value-wrapper:last-child{
+    border-bottom: 0;
+}
+section.dht-data{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+}
