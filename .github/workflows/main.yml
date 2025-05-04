@@ -27,7 +27,7 @@ jobs:
           server: access-5017314303.webspace-host.com
           port: 22 # default is 22
           # ssh_private_key: ${{ secrets.SHERWAN_SSH_PRIVATE_KEY }}
-          password: jr!RX63jtX3S_MW
+          password: ${{ secrets.SFTP_PASSWORD }}
  
           
           # will put all file under this path
