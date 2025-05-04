@@ -19,10 +19,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Create remote directory
-        run: |
-         ssh -i "${{ secrets.SHERWAN_SSH_PRIVATE_KEY }}" ${{ secrets.SFTP_ROOT_USER }}@${{ secrets.SERVER }} "mkdir -p /homepages/22/d4298833214/htdocs/esp32_abc"
-
+      - name: Creating file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.1
+        with:
+          username: ${{ secrets.SFTP_ROOT_USER }}
+          server: ${{ secrets.SERVER }}
+          port: 22
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          run: |
+           "mkdir -p /homepages/22/d4298833214/htdocs/esp32_abc"
           
       - name: ESP32-UPLOADS
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
