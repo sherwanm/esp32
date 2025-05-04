@@ -1,4 +1,4 @@
-name: CI-SFTP
+name: ESP32-UPLOADS
  
 # Controls when the action will run. 
 on:
@@ -23,7 +23,7 @@ jobs:
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
-          username: a1451542
+          username: a2317939
           server: access-5017314303.webspace-host.com
           port: 22 # default is 22
           ssh_private_key: ${{ secrets.SHERWAN_SSH_PRIVATE_KEY }}
