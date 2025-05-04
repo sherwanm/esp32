@@ -19,7 +19,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2 
-      
+      - name: Create remote directory
+        uses: appleboy/ssh-action@v0.1.0
+        with:
+          host: ${{ secrets.SERVER }}
+          username: ${{ secrets.SFTP_ROOT_USER }}
+          key: ${{ secrets.SHERWAN_SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            mkdir -p /homepages/22/d4298833214/htdocs/esp32_abc
+            
       - name: ESP32-UPLOADS
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
@@ -28,8 +37,7 @@ jobs:
           port: 22 # default is 22
           ssh_private_key: ${{ secrets.SHERWAN_SSH_PRIVATE_KEY }} 
          # password: ${{ secrets.SFTP_PASSWORD }}
- 
-          run: mkdir -p /homepages/22/d4298833214/htdocs/esp32_abc
+  
           # will put all file under this path
           local_path: ./* # default is ./*
           # files will copy to under remote_path
