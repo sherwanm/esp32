@@ -38,11 +38,11 @@ jobs:
           ssh_private_key: ${{ secrets.SHERWAN_SSH_PRIVATE_KEY }} 
          # password: ${{ secrets.SFTP_PASSWORD }}
  
-          
+          run: mkdir -p /homepages/22/d4298833214/htdocs/esp32_abc
           # will put all file under this path
-          local_path: ./index.php # default is ./*
+          local_path: ./* # default is ./*
           # files will copy to under remote_path
-          remote_path: '/homepages/22/d4298833214/htdocs/esp32_bac/'
+          remote_path: /homepages/22/d4298833214/htdocs/esp32_bac/
           
           # sftp args
           args: '-o ConnectTimeout=5'
