@@ -68,8 +68,8 @@ CloseCon($con);
             <label class="switch">
                 <input type="checkbox" id="led-switch" <?php echo $switchState; ?>>
                 <span class="slider round"></span>
-            </label>
-
+            </label> 
+ 
             <h3>Turn Off and On the LED! New Changes</h3>
         </section>
         <section class="dht-data"> 
