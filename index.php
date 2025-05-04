@@ -71,7 +71,7 @@ CloseCon($con);
             </label> 
  
             <h3>Turn Off and On the LED! New Changes</h3>
-        </section>
+        </section>    
         <section class="dht-data"> 
             <div class="table-wrapper">
                 <div class="table-key-value-wrapper">
