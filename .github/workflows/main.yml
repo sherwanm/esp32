@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create remote directory
         run: |
-         ssh -i "${{ secrets.SHERWAN_SSH_PRIVATE_KEY }}" ${{ secrets.SFTP_ROOT_USER }}@${{ secrets.SERVER }} "mkdir -p /homepages/22/d4298833214/htdocs/esp32_new"
+         ssh -i "${{ secrets.SHERWAN_SSH_PRIVATE_KEY }}" ${{ secrets.SFTP_ROOT_USER }}@${{ secrets.SERVER }} "mkdir -p /homepages/22/d4298833214/htdocs/esp32_abc"
 
           
       - name: ESP32-UPLOADS
@@ -37,7 +37,7 @@ jobs:
           # will put all file under this path
           local_path: ./index.php # default is ./*
           # files will copy to under remote_path
-          remote_path: '/homepages/22/d4298833214/htdocs/esp32_new/'
+          remote_path: '/homepages/22/d4298833214/htdocs/esp32_bac/'
           
           # sftp args
           args: '-o ConnectTimeout=5'
