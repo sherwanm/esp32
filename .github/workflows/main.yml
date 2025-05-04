@@ -20,14 +20,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
           
-      - name: SFTP Deploy
+      - name: ESP32-UPLOADS
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
           username: a1451542
           server: access-5017314303.webspace-host.com
           port: 22 # default is 22
           # ssh_private_key: ${{ secrets.SHERWAN_SSH_PRIVATE_KEY }}
-          password: 'jr!RX63jtX3S_MW'
+          password: jr!RX63jtX3S_MW
  
           
           # will put all file under this path
