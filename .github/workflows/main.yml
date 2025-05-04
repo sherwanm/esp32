@@ -33,7 +33,7 @@ jobs:
           # will put all file under this path
           local_path: ./index.php # default is ./*
           # files will copy to under remote_path
-          remote_path: '/esp32_new/'
+          remote_path: '/homepages/22/d4298833214/htdocs/esp32_new/'
           
           # sftp args
           args: '-o ConnectTimeout=5'
