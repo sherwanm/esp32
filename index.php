@@ -76,7 +76,7 @@ CloseCon($con);
             <div class="table-wrapper">
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Humidity:</div>
-                    <div class="humidity-percent">50%</div>
+                    <div class="humidity-percent">99%</div>
                 </div>
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Temperature:</div>
