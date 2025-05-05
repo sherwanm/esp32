@@ -26,7 +26,7 @@ if ($action == 'set') {
     $result = mysqli_query($con, $sql);
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        echo $row;
+         echo '<pre>'; print_r($row); echo '</pre>';
     } else {
         echo "No value found";
     }
