@@ -26,9 +26,8 @@ jobs:
           username: ${{ secrets.SFTP_ROOT_USER }}
           server: access-5017314303.webspace-host.com
           port: 22 # default is 22
-          # ssh_private_key: ${{ secrets.SHERWAN_SSH_PRIVATE_KEY }} 
-          sftp_only: true
-          password: ${{ secrets.SFTP_PASSWORD }}
+          ssh_private_key: ${{ secrets.SHERWAN_SSH_PRIVATE_KEY }}  
+          # password: ${{ secrets.SFTP_PASSWORD }}
   
           # will put all file under this path
           local_path: ./* # default is ./*
