@@ -72,7 +72,7 @@ CloseCon($con);
  
             <h3>Turn Off and On the LED! New Changes</h3>
         </section>    
-        <section class="dht-data"> 
+        <section class="dht-data">  
             <div class="table-wrapper">
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Humidity:</div>
