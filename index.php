@@ -41,7 +41,9 @@ CloseCon($con);
                     $fields_num = mysqli_num_fields($sqlData);
                     while ($row = mysqli_fetch_row($sqlData)) {
                         echo var_dump($row);
+                        echo var_dump($row[1]); 
                         echo "<tr>";
+
                         $ledValue = $row[1];
 
                         foreach ($row as $cell) {
