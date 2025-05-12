@@ -40,11 +40,20 @@ CloseCon($con);
 
                     $fields_num = mysqli_num_fields($sqlData);
                     while ($row = mysqli_fetch_row($sqlData)) {
-                        echo var_dump($row);
-                        echo var_dump($row[1]); 
+                        // echo var_dump($row);
+                        // echo var_dump($row[1]); 
                         echo "<tr>";
 
-                        $ledValue = $row[1];
+                        if ($row[0] == 10) {
+                            $ledValue = $row[1];
+                        }
+                        if ($row[0] == 11) {
+                            $humidity = $row[1];
+                        }
+
+                        if ($row[0] == 12) {
+                            $tempo = $row[1];
+                        }
 
                         foreach ($row as $cell) {
                             echo "<td>$cell</td>";
@@ -80,11 +89,11 @@ CloseCon($con);
             <div class="table-wrapper">
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Humidity:</div>
-                    <div class="humidity-percent">51%</div>
+                    <div class="humidity-percent"><?php echo  $humidity ?>% </div>
                 </div>
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Temperature:</div>
-                    <div class="celcius-degree">30°C</div>
+                    <div class="celcius-degree"><?php echo  $temp  ?>°C</div>
                 </div>
             </div>
         </section>
