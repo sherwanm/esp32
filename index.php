@@ -40,9 +40,10 @@ CloseCon($con);
 
                     $fields_num = mysqli_num_fields($sqlData);
                     while ($row = mysqli_fetch_row($sqlData)) {
+                        echo var_dump($row);
                         echo "<tr>";
                         $ledValue = $row[1];
-                        echo "<td>" . $row . "</td>";
+
                         foreach ($row as $cell) {
                             echo "<td>$cell</td>";
                         }
