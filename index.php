@@ -69,12 +69,8 @@ CloseCon($con);
                 <input type="checkbox" id="led-switch" <?php echo $switchState; ?>>
                 <span class="slider round"></span>
             </label> 
- 
-<<<<<<< HEAD
+  
             <h3>Turn Off and On the LED!</h3>
-=======
-            <h3>Turn Off and On the LED! 1234</h3>
->>>>>>> 666b6e8727446416a36352b6b9d70cdf9a488080
         </section>    
         <section class="dht-data">  
             <div class="table-wrapper">
