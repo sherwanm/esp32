@@ -42,6 +42,7 @@ CloseCon($con);
                     while ($row = mysqli_fetch_row($sqlData)) {
                         echo "<tr>";
                         $ledValue = $row[1];
+                        echo "<td>" . $row[0] . "</td>";
                         foreach ($row as $cell) {
                             echo "<td>$cell</td>";
                         }
@@ -68,11 +69,11 @@ CloseCon($con);
             <label class="switch">
                 <input type="checkbox" id="led-switch" <?php echo $switchState; ?>>
                 <span class="slider round"></span>
-            </label> 
-  
+            </label>
+
             <h3>Turn Off and On the LED!</h3>
-        </section>    
-        <section class="dht-data">  
+        </section>
+        <section class="dht-data">
             <div class="table-wrapper">
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Humidity:</div>
