@@ -42,7 +42,7 @@ CloseCon($con);
                     while ($row = mysqli_fetch_row($sqlData)) {
                         echo "<tr>";
                         $ledValue = $row[1];
-                        echo "<td>" . $row[0] . "</td>";
+                        echo "<td>" . $row . "</td>";
                         foreach ($row as $cell) {
                             echo "<td>$cell</td>";
                         }
