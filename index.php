@@ -70,13 +70,17 @@ CloseCon($con);
                 <span class="slider round"></span>
             </label> 
  
+<<<<<<< HEAD
             <h3>Turn Off and On the LED!</h3>
+=======
+            <h3>Turn Off and On the LED! 1234</h3>
+>>>>>>> 666b6e8727446416a36352b6b9d70cdf9a488080
         </section>    
         <section class="dht-data">  
             <div class="table-wrapper">
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Humidity:</div>
-                    <div class="humidity-percent">50%</div>
+                    <div class="humidity-percent">51%</div>
                 </div>
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Temperature:</div>

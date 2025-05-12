@@ -22,11 +22,11 @@ if ($action == 'set') {
     echo "LED value updated to $led";
 } elseif ($action == 'get') {
     $componentId = $_GET["componentId"];
-    $sql = "SELECT value FROM ESP_COMPONENTS WHERE id = '$componentId'";
+    $sql = "SELECT value, id FROM ESP_COMPONENTS WHERE id = '$componentId'";
     $result = mysqli_query($con, $sql);
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        echo $row['value'];
+         echo '<pre>'; print_r($row); echo '</pre>';
     } else {
         echo "No value found";
     }
