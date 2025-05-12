@@ -93,7 +93,7 @@ CloseCon($con);
                 </div>
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Temperature:</div>
-                    <div class="celcius-degree"><?php echo  $temp  ?>°C</div>
+                    <div class="celcius-degree"><?php echo  $tempo  ?>°C</div>
                 </div>
             </div>
         </section>
