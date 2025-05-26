@@ -20,7 +20,7 @@ if ($key != "A1B2C34D") {
 if ($action == 'set' && $led !== null) {
     $sql = "UPDATE ESP_COMPONENTS SET value = '$led' WHERE id = 10 ";
     mysqli_query($con, $sql);
-    echo "LED value updated to $led";
+    // echo "LED value updated to $led";
 } elseif ($action == 'get') {
     $componentId = $_GET["componentId"];
     $sql = "SELECT value, id FROM ESP_COMPONENTS WHERE id = '$componentId'";
