@@ -33,7 +33,7 @@ if ($action == 'set' && $led !== null) {
     }
 }
 
-if(isset($tempo) && $action == 'set') {
+if (isset($tempo) && $action == 'set') {
     $sql = "UPDATE ESP_COMPONENTS SET value = '$tempo' WHERE id = 12";
     mysqli_query($con, $sql);
     echo "Tempo value updated to $tempo";
