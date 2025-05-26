@@ -7,6 +7,7 @@ ini_set('display_errors', 1);
 $con = OpenCon();
 $led = $_GET["led"] ?? null;
 $tempo = $_GET["tempo"] ?? null;
+$humidity = $_GET["humidity"] ?? null;
 $key = $_GET["key"];
 $action = $_GET["action"];
 
@@ -37,6 +38,12 @@ if (isset($tempo) && $action == 'set') {
     $sql = "UPDATE ESP_COMPONENTS SET value = '$tempo' WHERE id = 12";
     mysqli_query($con, $sql);
     echo "Tempo value updated to $tempo";
+}
+
+if (isset($humidity) && $action == 'set') {
+    $sql = "UPDATE ESP_COMPONENTS SET value = '$humidity' WHERE id = 11";
+    mysqli_query($con, $sql);
+    echo "Humidity value updated to $humidity";
 }
 
 CloseCon($con);
