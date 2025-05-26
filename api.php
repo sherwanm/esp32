@@ -6,6 +6,7 @@ ini_set('display_errors', 1);
 
 $con = OpenCon();
 $led = $_GET["led"] ?? null;
+$tempo = $_GET["tempo"] ?? null;
 $key = $_GET["key"];
 $action = $_GET["action"];
 
@@ -16,7 +17,7 @@ if ($key != "A1B2C34D") {
 }
 
 // led id is 10
-if ($action == 'set') {
+if ($action == 'set' && $led !== null) {
     $sql = "UPDATE ESP_COMPONENTS SET value = '$led' WHERE id = 10 ";
     mysqli_query($con, $sql);
     echo "LED value updated to $led";
@@ -31,4 +32,11 @@ if ($action == 'set') {
         echo "No value found";
     }
 }
+
+if(isset($tempo) && $action == 'set') {
+    $sql = "UPDATE ESP_COMPONENTS SET value = '$tempo' WHERE id = 12";
+    mysqli_query($con, $sql);
+    echo "Tempo value updated to $tempo";
+}
+
 CloseCon($con);
