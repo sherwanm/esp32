@@ -58,7 +58,7 @@ CloseCon($con);
                         }
 
                         foreach ($row as $cell) {
-                            echo "<td>$cell</td>";
+                            echo "<td>$cell</td>".var_dump($cell);
                         }
 
                         echo "</tr>\n";
