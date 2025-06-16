@@ -58,7 +58,7 @@ CloseCon($con);
                         }
 
                         foreach ($row as $cell) {
-                            $length = mb_strlen($str, 'UTF-8');
+                            $length = mb_strlen($cell, 'UTF-8');
                             if($length < 5) // dont show date here
                                echo "<td>$cell</td>";
                         }
