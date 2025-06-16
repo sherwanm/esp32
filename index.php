@@ -49,10 +49,12 @@ CloseCon($con);
                         }
                         if ($row[0] == 11) {
                             $humidity = $row[1];
+                            $humidityUpdate = $row[2];
                         }
 
                         if ($row[0] == 12) {
                             $tempo = $row[1];
+                            $tempoUpdate = $row[2];
                         }
 
                         foreach ($row as $cell) {
@@ -90,10 +92,12 @@ CloseCon($con);
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Humidity:</div>
                     <div class="humidity-percent"><?php echo  $humidity ?>% </div>
+                    <div class="humidity-updated"><?php echo  $humidityUpdate ?> </div>
                 </div>
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Temperature:</div>
                     <div class="celcius-degree"><?php echo  $tempo  ?>°C</div>
+                    <div class="celcius-degree-updated"><?php echo  $tempoUpdate ?> </div>
                 </div>
             </div>
         </section>

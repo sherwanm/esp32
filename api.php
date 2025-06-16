@@ -17,9 +17,11 @@ if ($key != "A1B2C34D") {
     exit();
 }
 
+$now = date('Y-m-d-H-i-s');
+
 // led id is 10
 if ($action == 'set' && $led !== null) {
-    $sql = "UPDATE ESP_COMPONENTS SET value = '$led' WHERE id = 10 ";
+    $sql = "UPDATE ESP_COMPONENTS SET value = '$led' , updated_at = '$now' WHERE id = 10 ";
     mysqli_query($con, $sql);
     // echo "LED value updated to $led";
 } elseif ($action == 'get') {
@@ -34,14 +36,14 @@ if ($action == 'set' && $led !== null) {
     }
 }
 
-if (isset($tempo) && $action == 'set') {
-    $sql = "UPDATE ESP_COMPONENTS SET value = '$tempo' WHERE id = 12";
+if (isset($tempo) && $action == 'set') { 
+    $sql = "UPDATE ESP_COMPONENTS SET value = '$tempo' , updated_at = '$now' WHERE id = 12";
     mysqli_query($con, $sql);
     echo "Tempo value updated to $tempo";
 }
 
-if (isset($humidity) && $action == 'set') {
-    $sql = "UPDATE ESP_COMPONENTS SET value = '$humidity' WHERE id = 11";
+if (isset($humidity) && $action == 'set') { 
+    $sql = "UPDATE ESP_COMPONENTS SET value = '$humidity' , updated_at = '$now' WHERE id = 11";
     mysqli_query($con, $sql);
     echo "Humidity value updated to $humidity";
 }
