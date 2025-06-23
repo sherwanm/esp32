@@ -124,13 +124,15 @@ input:checked+.slider:before {
 }
 .celcius-degree, .humidity-percent{
     background: #cccccc;
-    padding: 8px;
-    width: 50%;
+    padding: 8px; 
 }
 .table-key-value-wrapper{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #b3b1b1;
+    display: grid;
+    grid-template-columns: 30% 20% 45%;
+}
+.table-key-value-wrapper >*{
+    padding: 8px;
+    width: 100%;
 }
 .table-key-value-wrapper:last-child{
     border-bottom: 0;
