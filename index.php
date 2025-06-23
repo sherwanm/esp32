@@ -22,16 +22,7 @@ CloseCon($con);
 
 <body>
     <main>
-<!-- <section class="first-section">
-            <h2>Data From ESP31</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th class="th-sm">Id</th>
-                        <th class="th-sm">Data</th>
-                    </tr>
-                </thead>
-                <tbody>
+
                     <?php
                     if (!$sqlData) {
                         die("Query to show fields from table failed");
@@ -55,9 +46,6 @@ CloseCon($con);
                         } 
                     } 
                     ?>
-                </tbody>
-            </table>
-        </section> -->
         <section class="second-section">
             <?php
             if ($ledValue == 1) {
