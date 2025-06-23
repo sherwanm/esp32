@@ -40,8 +40,6 @@ CloseCon($con);
 
                     $fields_num = mysqli_num_fields($sqlData);
                     while ($row = mysqli_fetch_row($sqlData)) {
-                        // echo var_dump($row);
-                        // echo var_dump($row[1]); 
                         echo "<tr>";
 
                         if ($row[0] == 10) {
@@ -59,8 +57,8 @@ CloseCon($con);
 
                         foreach ($row as $cell) {
                             $length = mb_strlen($cell, 'UTF-8');
-                            if($length < 5) // dont show date here
-                               echo "<td>$cell</td>";
+                            if ($length < 5) // dont show date here
+                                echo "<td>$cell</td>";
                         }
 
                         echo "</tr>\n";
@@ -91,6 +89,12 @@ CloseCon($con);
         </section>
         <section class="dht-data">
             <div class="table-wrapper">
+                <h2>DHT Data</h2> 
+                <div class="table-key-value-wrapper">
+                    <div class="table-key">Type</div>
+                    <div class="humidity-percent">Value </div>
+                    <div class="humidity-updated">Last update </div>
+                </div>
                 <div class="table-key-value-wrapper">
                     <div class="table-key">Humidity:</div>
                     <div class="humidity-percent"><?php echo  $humidity ?>% </div>
