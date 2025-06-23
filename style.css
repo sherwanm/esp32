@@ -115,7 +115,7 @@ input:checked+.slider:before {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
- 
+  
 .table-key:last-child{
     border-bottom: 0;
 }
