@@ -88,8 +88,8 @@ CloseCon($con);
             <h3>Turn Off and On the LED! </h3>
         </section>
         <section class="dht-data">
-            <div class="table-wrapper">
                 <h2>DHT Data</h2> 
+            <div class="table-wrapper">
                 <div class="table-key-value-wrapper row row-1">
                     <div class="table-key column column-1">Type</div>
                     <div class="humidity-percent column column-2">Value </div>
