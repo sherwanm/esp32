@@ -133,7 +133,7 @@ input:checked+.slider:before {
 .table-key-value-wrapper:last-child{
     border-bottom: 0;
 }
-.column-1, .column-2{
+.row-1, .row-2{
     border-bottom: 1px solid #ccc;
 }
 section.dht-data{
