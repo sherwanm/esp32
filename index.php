@@ -33,13 +33,13 @@ CloseCon($con);
                 </thead>
                 <tbody>
                     <?php
-                    /*if (!$sqlData) {
+                    if (!$sqlData) {
                         die("Query to show fields from table failed");
                     }
 
                     $fields_num = mysqli_num_fields($sqlData);
                     while ($row = mysqli_fetch_row($sqlData)) {
-                        echo "<tr>";
+                       
 
                         if ($row[0] == 10) {
                             $ledValue = $row[1];
@@ -52,16 +52,8 @@ CloseCon($con);
                         if ($row[0] == 12) {
                             $tempo = $row[1];
                             $tempoUpdate = $row[2];
-                        }
-
-                        foreach ($row as $cell) {
-                            $length = mb_strlen($cell, 'UTF-8');
-                            if ($length < 5) // dont show date here
-                                echo "<td>$cell</td>";
-                        }
-
-                        echo "</tr>\n";
-                    } */ 
+                        } 
+                    } 
                     ?>
                 </tbody>
             </table>
