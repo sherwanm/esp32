@@ -90,20 +90,20 @@ CloseCon($con);
         <section class="dht-data">
             <div class="table-wrapper">
                 <h2>DHT Data</h2> 
-                <div class="table-key-value-wrapper">
-                    <div class="table-key">Type</div>
-                    <div class="humidity-percent">Value </div>
-                    <div class="humidity-updated">Last update </div>
+                <div class="table-key-value-wrapper row row-1">
+                    <div class="table-key column column-1">Type</div>
+                    <div class="humidity-percent column column-2">Value </div>
+                    <div class="humidity-updated column column-3">Last update </div>
                 </div>
-                <div class="table-key-value-wrapper">
-                    <div class="table-key">Humidity:</div>
-                    <div class="humidity-percent"><?php echo  $humidity ?>% </div>
-                    <div class="humidity-updated"><?php echo  $humidityUpdate ?> </div>
+                <div class="table-key-value-wrapper row row-2">
+                    <div class="table-key column column-1">Humidity:</div>
+                    <div class="humidity-percent column column-2"><?php echo  $humidity ?>% </div>
+                    <div class="humidity-updated column column-3"><?php echo  $humidityUpdate ?> </div>
                 </div>
-                <div class="table-key-value-wrapper">
-                    <div class="table-key">Temperature:</div>
-                    <div class="celcius-degree"><?php echo  $tempo  ?>°C</div>
-                    <div class="celcius-degree-updated"><?php echo  $tempoUpdate ?> </div>
+                <div class="table-key-value-wrapper row row-3">
+                    <div class="table-key column column-1">Temperature:</div>
+                    <div class="celcius-degree column column-2"><?php echo  $tempo  ?>°C</div>
+                    <div class="celcius-degree-updated column column-3"><?php echo  $tempoUpdate ?> </div>
                 </div>
             </div>
         </section>
